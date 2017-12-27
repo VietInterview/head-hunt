@@ -1,0 +1,46 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="1">Job</custom-type>
+        <custom-type translate="1">Application</custom-type>
+        <custom-type translate="1">Resume</custom-type>
+        <custom-type translate="1">Company</custom-type>
+        <custom-type translate="1">Testimonial</custom-type>
+        <custom-type translate="1">Slider</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">job_category</taxonomy>
+        <taxonomy translate="1">job_type</taxonomy>
+        <taxonomy translate="1">job_region</taxonomy>
+        <taxonomy translate="1">application_status</taxonomy>
+        <taxonomy translate="1">resume_category</taxonomy>
+        <taxonomy translate="1">career_level</taxonomy>
+    </taxonomies>
+    <admin-texts>
+        <key name="jobboard_option">
+            <key name="find_job_title" />
+            <key name="find_job_desc" />
+            <key name="find_job_button" />
+            <key name="post_job_title" />
+            <key name="post_job_desc" />
+            <key name="post_job_button" />
+            <key name="keyword_placeholder" />
+            <key name="location_placeholder" />
+            <key name="job_status_title" />
+            <key name="job_status_description" />
+			<key name="job_steps_title" />
+			<key name="job_steps_description" />
+			<key name="step_1_label" />
+			<key name="step_1_title" />
+			<key name="step_2_label" />
+			<key name="step_2_title" />
+			<key name="step_3_label" />
+			<key name="step_3_title" />
+			<key name="step_4_label" />
+			<key name="step_4_title" />
+			<key name="testimonial_title" />
+			<key name="testimonial_description" />
+			<key name="company_title" />
+			<key name="company_description" />
+        </key>
+    </admin-texts>
+</wpml-config>
