@@ -22,13 +22,6 @@
 				}//endforeach;
 			}//endif;
 		?>
-		<?php pll_the_languages( array(
-		   'show_flags' => 1,
-		   'show_names' => 0,
-		   'dropdown' => 0,
-		   'hide_if_empty' => 0
-		 
-		)); ?>	
 		</ul><!-- /.social-media -->
 		<?php
 		if( jobboard_option('enable_admin_menu') ){

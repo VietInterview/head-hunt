@@ -117,7 +117,8 @@ get_header(); ?>
 							$email_to = ( isset($_POST['register_email']) ) ? $_POST['register_email'] : '' ;
 							$username = (isset($_POST['register_name'])) ? $_POST['register_name'] : '';
 							$password = (isset($_POST['register_password'])) ? $_POST['register_password'] : '';
-							$role = __('Undefined', 'jobboard');
+							$role = __('Job Seeker', 'jobboard');
+							__('Undefined', 'jobboard');
 							$register_role = (isset($_POST['register_role'])) ? $_POST['register_role'] : '';
 
 							if($register_role == 'job_lister'){
@@ -174,14 +175,14 @@ get_header(); ?>
 							<div class="col-sm-6">
 								<div class="radio radio-info form-radio-group">
 									<input type="radio" name="register_role" id="register_role_job_lister" value="job_lister" /><label for="register_role_job_lister"><?php _e( 'Job Lister', 'jobboard' ); ?></label>
-								</div><!-- /.form-radio-group -->
+								</div> --><!-- /.form-radio-group -->
 							</div><!-- /.col-sm-6 -->
 							<div class="col-sm-6">
 								<div class="radio radio-info form-radio-group">
 									<input type="radio" name="register_role" id="register_role_job_seeker" value="job_seeker" checked /><label for="register_role_job_seeker"><?php _e( 'Job Seeker', 'jobboard' ); ?></label>
 								</div><!-- /.form-radio-group -->
 							</div><!-- /.col-sm-6 -->
-						</div><!-- /.row -->
+						</div> --><!-- /.row -->
 						<div class="row">
 							<div class="col-sm-7">
 								<div id="answerme" class="answerme">
