@@ -1438,7 +1438,7 @@ a.testimonial_linkedin:hover {
 .the-job-type {
 	width: 160px;
 	text-align: center;
-	border-right: none !important;
+	/*border-right: none !important;*/
 }
 .the-job-button .btn-apply-job {
 	font-size: 16px;

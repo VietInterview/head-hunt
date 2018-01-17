@@ -62,6 +62,51 @@
 	line-height: 22px;
 }
 
+.the-job-aditional-title:last-child{
+	margin-left: 0;
+}
+
+.the-job-title{
+	float: left;
+}
+
+.the-job-cate{
+	text-align: center;
+	width: auto;
+	padding: 0 30px;
+}
+
+.the-job-location{
+	width: auto;
+	padding:0 30px;
+}
+
+.the-job-type{
+	width: auto;
+	padding:0 30px;
+}
+
+.the-job-salary{
+	width: auto;
+	padding:0 30px;
+	text-align: center;
+}
+
+.the-job-exp{
+	width: auto;
+	padding:0 30px;
+	text-align: center;
+	border-right: none !important;
+}
+
+.the-job-button{
+	float: right;
+}
+
 .company-job-detail {
 	margin-top: 30px;
+}
+
+.job-cat-links {
+	padding-right: 0;
 }
