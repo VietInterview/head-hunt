@@ -63,7 +63,7 @@
 
 							<button type="button" class="btn btn-apply-cancel" data-toggle="modal" data-target="#apply-job-modal"><?php _e( 'Cancel', 'jobboard' ); ?></button>
 							<button type="submit" name="submit" class="btn btn-apply-submit"><?php _e( 'Apply Now', 'jobboard' ); ?></button>
-							<p>Or you can send your resume to <a href="mailto:info@vietinterview.com" target="_blank" rel="noopener">info@vietinterview.com</a></p>
+							<p>Or you can send your resume to <a href="mailto:<?php echo get_the_author_meta('user_email'); ?>"><?php echo get_the_author_meta('user_email'); ?></a></p>
 						</div><!-- /.col-sm-8 -->
 					</div><!-- /.form-group -->
 				</form>
@@ -78,7 +78,7 @@
 							echo __( 'You need to signed in to apply the job. Click', 'jobboard' ).' <a href="'.add_query_arg( 'redirect', urlencode( esc_url( get_permalink( get_the_id() ) ) ), esc_url( jobboard_get_permalink( 'login' ) ) ).'">'.__( 'Here', 'jobboard' ).'</a> '.'to sign in.';
 						}
 					?>
-					<p>Or you can send your resume to <a href="mailto:info@vietinterview.com" target="_blank" rel="noopener">info@vietinterview.com</a></p>
+					<p>Or you can send your resume to <a href="mailto:<?php echo get_the_author_meta('user_email'); ?>"><?php echo get_the_author_meta('user_email'); ?></a></p>
 				</div>
 			<?php
 				}
