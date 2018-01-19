@@ -185,3 +185,86 @@
     -webkit-filter: grayscale(0%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
     filter: none;
 }
+
+#wrapper .register{
+	margin-top: 30px;
+}
+
+#wrapper p{
+	text-align: justify;
+}
+
+.the-job-details{
+	margin: 10px 0;
+}
+
+#job-description article > h1 {
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#job-detail{
+	padding: 10px 0 20px;
+}
+
+#wrapper h4{
+	margin-top: 20px;
+	margin-bottom: 35px;
+}
+
+.intro{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#content{
+	margin-top: 20px;
+	padding-top: 0;
+}
+
+#content p{
+	text-align: justify;
+	font-size: 16px;
+	padding-bottom: 30px;
+	margin-bottom: 0;
+}
+
+#content .team{
+    background: #f7f7f7;
+    margin-top: -20px;
+    padding-top: 20px;
+    margin-bottom: -40px;
+}
+
+.team #testimonials{
+	padding-top: 20px;
+}
+
+.team #testimonials-wrapper{
+	margin-top: 10px;
+}
+
+.team #testimonials-caption{
+	padding-top: 10px;
+}
+
+.team #testimonials-caption p{
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+.team #testimonials-caption .caption-social {
+    margin-top: 10px;
+}
+
+#page-title-wrapper{
+	min-height: 80px;
+}
+
+.page-title{
+	line-height: 80px;
+}
+
+#contact-form.vacancy-form textarea.form-control{
+	height: 150px;
+}

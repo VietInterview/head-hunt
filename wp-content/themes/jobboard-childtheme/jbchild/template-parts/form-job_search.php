@@ -40,7 +40,7 @@
 							?>
 								<select name="location" id="location">
 								<?php
-									echo '<option value="" selected="selected">'.__( 'Any', 'jobboard' ).'</option>';
+									echo '<option value="" selected="selected">'.__( 'Location', 'jobboard' ).'</option>';
 									$terms = get_terms( 'job_region' );
 									foreach( $terms as $term ){
 										echo '<option value="'.esc_attr( $term->slug ).'">'.esc_attr( $term->name ).'</option>';
