@@ -622,11 +622,11 @@
 					<script type="text/javascript">
 						jQuery(document).ready(function(){
 							jQuery('.job-<?php echo $job_id ?>').click(function(){
-								console.log(jQuery.('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").toString());
-								if(jQuery.('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").toString()){
-									jQuery.(this).css("display", "block");
+								console.log(jQuery('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").toString());
+								if(jQuery('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").toString()){
+									jQuery(this).css("display", "block");
 								}else{
-									jQuery.(this).css("display", "none");
+									jQuery(this).css("display", "none");
 								}
 							});
 						});
