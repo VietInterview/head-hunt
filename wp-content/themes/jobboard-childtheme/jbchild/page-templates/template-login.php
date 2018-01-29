@@ -405,7 +405,7 @@ get_header(); ?>
 			<div class="col-md-7">
 				<div <?php post_class(); ?>>
 					<h4>Submit your resume online and VietInterview helps you find your next job opportunity.</h4>
-					<p>Your future starts now. Don't rely on impersonal job boards to reach your personal career goals. In today's economy, you need knowledgeable guidance to find the right job, right now. Vietinterview can help you identify your best move or successfully transition careers. Please fill out the contact form below or contact us at 0466.629.448 or send your resume to <a href="mailto:info@vietinterview.com" target="_blank" rel="noopener"> info@vietinterview.com</a></p>
+					<p>Your future starts now. Don't rely on impersonal job boards to reach your personal career goals. In today's economy, you need knowledgeable guidance to find the right job, right now. Vietinterview can help you identify your best move or successfully transition careers. Please fill out the contact form below or contact us at 0466.629.448 or send your resume to <a href="mailto:thang.tran@vietinterview.com" target="_blank" rel="noopener"> thang.tran@vietinterview.com</a></p>
 					<article id="page-<?php the_ID(); ?>" class="register">
 					<?php
 						while( have_posts() ){
