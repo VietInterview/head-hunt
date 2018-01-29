@@ -617,18 +617,18 @@
 						?>
 					</div> --><!-- /.job-list-featured -->
 					<div class="applications_job">
-						<button id='hideshow' class="btn btn-info job-<?php echo $job_id?>">Applicants</button>
+						<button id='hideshow' class="btn btn-info job-<?php echo $job_id?>" onClick="test()">Applicants</button>
 					</div>
 					<script type="text/javascript">
 						jQuery(document).ready(function(){
 							jQuery('.job-<?php echo $job_id ?>').click(function(){
-								console.log(jQuery('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").toString());
-								if(!jQuery('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").toString()){
-									jQuery('.job-list-item').css("display", "none");
-								}else{
-									jQuery('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").css("display", "block");
-								}
+								jQuery('.job-list-item').css("display", "none");
+								jQuery(".job-<?php echo $job_id ?>-child").css("display", "block");
+								console.log('123');
 							});
+							funciton test(){
+								console.log('123456');
+							}
 						});
 					</script>
 				</div><!-- /.job-list-item -->
