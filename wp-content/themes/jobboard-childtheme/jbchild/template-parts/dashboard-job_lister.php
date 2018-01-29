@@ -623,7 +623,7 @@
 						jQuery(document).ready(function(){
 							jQuery('.job-<?php echo $job_id ?>').click(function(){
 								console.log(<?php echo $job_id?>);
-								if(jQuery.('.job-list-item').hasClass("job-<?php echo $job_id ?>-child")){
+								if(jQuery.('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").toString()){
 									jQuery.(this).css("display", "block");
 								}else{
 									jQuery.(this).css("display", "none");
