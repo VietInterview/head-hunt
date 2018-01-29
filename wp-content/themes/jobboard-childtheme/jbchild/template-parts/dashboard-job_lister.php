@@ -730,6 +730,7 @@
 					<div class="application-job">
 					<?php
 						echo esc_attr( get_the_title( get_post_meta( get_the_id(), '_jboard_applied_job', true ) ) ); ?>
+						<?php print_r(get_post_meta( get_the_id(), '_jboard_applied_job', true ))?>
 					</div><!-- /.resume-list-category -->
 
 					<div class="job-list-date resume-list-date hidden-sm">
