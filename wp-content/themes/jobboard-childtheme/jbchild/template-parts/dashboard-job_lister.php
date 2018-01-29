@@ -626,7 +626,7 @@
 								jQuery(".job-<?php echo $job_id ?>-child").css("display", "block");
 								console.log('123');
 							});
-							funciton test(){
+							function test(){
 								console.log('123456');
 							}
 						});
