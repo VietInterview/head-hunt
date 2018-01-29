@@ -621,11 +621,13 @@
 					</div>
 					<script type="text/javascript">
 						jQuery(document).ready(function(){
-							jQuery('#hideshow').live('click', function(event) {        
-								jQuery('#applicant-list').toggle('slow', 2000);
-							});
 							jQuery('.job-<?php echo $job_id ?>').click(function(){
 								console.log(<?php echo $job_id?>);
+								if(jQuery.('.job-list-item').hasClass("job-<?php echo $job_id ?>-child")){
+									jQuery.(this).css("display", "block");
+								}else{
+									jQuery.(this).css("display", "none");
+								}
 							});
 						});
 					</script>
@@ -710,7 +712,7 @@
 						$app->the_post();
 
 					?>
-				<div id="list-item-app-<?php echo get_the_id(); ?>" class="job-list-item <?php echo $job_id ?> clearfix">
+				<div id="list-item-app-<?php echo get_the_id(); ?>" class="job-list-item job-<?php echo get_post_meta( get_the_id(), '_jboard_applied_job', true ) ?>-child clearfix">
 					<div class="application-list-title">
 						<div class="applicant-list-title-wrapper">
 							<h4>
@@ -730,7 +732,6 @@
 					<div class="application-job">
 					<?php
 						echo esc_attr( get_the_title( get_post_meta( get_the_id(), '_jboard_applied_job', true ) ) ); ?>
-						<?php print_r(get_post_meta( get_the_id(), '_jboard_applied_job', true ))?>
 					</div><!-- /.resume-list-category -->
 
 					<div class="job-list-date resume-list-date hidden-sm">
