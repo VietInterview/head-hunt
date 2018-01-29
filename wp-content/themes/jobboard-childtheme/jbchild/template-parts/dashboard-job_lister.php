@@ -623,10 +623,10 @@
 						jQuery(document).ready(function(){
 							jQuery('.job-<?php echo $job_id ?>').click(function(){
 								console.log(jQuery('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").toString());
-								if(jQuery('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").toString()){
-									jQuery(this).css("display", "block");
+								if(!jQuery('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").toString()){
+									jQuery('.job-list-item').css("display", "none");
 								}else{
-									jQuery(this).css("display", "none");
+									jQuery('.job-list-item').css("display", "block");
 								}
 							});
 						});
