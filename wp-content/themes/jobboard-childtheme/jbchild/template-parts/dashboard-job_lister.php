@@ -626,7 +626,7 @@
 								if(!jQuery('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").toString()){
 									jQuery('.job-list-item').css("display", "none");
 								}else{
-									jQuery('.job-list-item').css("display", "block");
+									jQuery('.job-list-item').hasClass("job-<?php echo $job_id ?>-child").css("display", "block");
 								}
 							});
 						});
