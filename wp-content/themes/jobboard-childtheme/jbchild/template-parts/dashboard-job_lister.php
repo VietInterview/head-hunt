@@ -617,14 +617,17 @@
 						?>
 					</div> --><!-- /.job-list-featured -->
 					<div class="applications_job">
-						<button id='hideshow' class="btn btn-info">Applicants</button>
+						<button id='hideshow' class="btn btn-info <?php echo $job_id?>">Applicants</button>
 					</div>
 					<script type="text/javascript">
 						jQuery(document).ready(function(){
-					    jQuery('#hideshow').live('click', function(event) {        
-					         jQuery('#applicant-list').toggle('slow', 2000);
-					    });
-					});
+							jQuery('#hideshow').live('click', function(event) {        
+								jQuery('#applicant-list').toggle('slow', 2000);
+							});
+							jQuery('.<?php echo $job_id ?>').click(fucntion(){
+								console.log(<?php echo $job_id?>);
+							});
+						});
 					</script>
 				</div><!-- /.job-list-item -->
 
