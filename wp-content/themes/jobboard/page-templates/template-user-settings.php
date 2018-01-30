@@ -160,6 +160,8 @@ get_header(); ?>
   <p><input type="submit" name="update_user" value="Update" /></p>
   */ ?>
 
+  <?php get_wp_user_avatar() ?>
+
   <p><button type="submit" name="update_user" value="1" class="btn btn-send-contact-form" data-loading-text="<?php _e( 'Updating...', 'jobboard' ); ?>"><?php _e( 'Update Profile', 'jobboard' ); ?></button>
   </p>
 
