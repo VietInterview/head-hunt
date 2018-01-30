@@ -55,14 +55,14 @@
 
 					<div class="col-md-3">
 						<div class="form-group job-filter-dropdown">
-							<label class="text-label" for="location"><?php _e( 'Category', 'jobboard' ); ?></label>
+							<label class="text-label" for="category"><?php _e( 'Category', 'jobboard' ); ?></label>
 
 						<?php
 
 						$args = array(
 							'orderby'           => 'name',
 							'order'             => 'ASC',
-							'hide_empty'        => true,
+							'hide_empty'        => false,
 							'exclude'           => array(),
 							'exclude_tree'      => array(),
 							'include'           => array(),

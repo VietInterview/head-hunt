@@ -658,145 +658,150 @@
 			<h3 class="pull-left"><i class="fa fa-briefcase"></i><?php _e( 'APPLICANTS', 'jobboard' ); ?></h3>
 		</div>
 		<div id="applicant-list" class="company-listing-wrapper">
+			<table id="myTable" class="applicant-list-inner" border="1px">
+				<thead>
+				    <tr>
+				      	<th scope="col">Resume</th>
+				      	<th scope="col">Job</th>
+				      	<th scope="col">Date</th>
+				      	<th scope="col">Status</th>
+				      	<th scope="col">View Resume</th>
+				      	<th scope="col">Delete</th>
+				    </tr>
+				</thead>
+				<tbody>
+				<?php
 
-			<div class="applicant-list-inner">
-			<?php
-
-				$job_args = array(
-					'post_type'			=> 'job',
-					'author'			=> get_current_user_id(),
-					'posts_per_page'	=> -1,
-				);
-				$jobs = new WP_Query($job_args);
-				$resume_id = array();
-				if($jobs->have_posts()){
-					while( $jobs->have_posts() ){
-						$jobs->the_post();
-
-						$resume_id[] = get_the_id();
-
-					}//endwhile;
-
-					wp_reset_postdata();
-				}//endif;
-
-				$meta_query = array();
-
-				foreach( $resume_id as $res_id ){
-
-					$meta_query[] = array(
-						'key'	=> '_jboard_applied_job',
-						'value'	=> $res_id,
+					$job_args = array(
+						'post_type'			=> 'job',
+						'author'			=> get_current_user_id(),
+						'posts_per_page'	=> -1,
 					);
+					$jobs = new WP_Query($job_args);
+					$resume_id = array();
+					if($jobs->have_posts()){
+						while( $jobs->have_posts() ){
+							$jobs->the_post();
 
-				}//endforeach;
-				$meta_query['relation'] = 'OR';
-				$app_args = array();
-				if( $jobs->have_posts() ){
-					$app_args = array(
-						'post_type' 			=> 'application',
-						'post_status'			=> 'publish',
-						'posts_per_page'	=> get_option( 'posts_per_page', 10 ),
-						'paged'						=> $app_paged,
-						'meta_query'			=> $meta_query,
-					);
-				}
+							$resume_id[] = get_the_id();
 
-				$app = new WP_Query($app_args);
+						}//endwhile;
 
-				if( $app->have_posts() ){
-					while( $app->have_posts() ){
-						$app->the_post();
+						wp_reset_postdata();
+					}//endif;
 
-					?>
-				<div id="list-item-app-<?php echo get_the_id(); ?>" class="job-list-item job-list-item-child job-<?php echo get_post_meta( get_the_id(), '_jboard_applied_job', true ) ?>-child clearfix">
-					<div class="application-list-title">
-						<div class="applicant-list-title-wrapper">
-							<h4>
+					$meta_query = array();
+
+					foreach( $resume_id as $res_id ){
+
+						$meta_query[] = array(
+							'key'	=> '_jboard_applied_job',
+							'value'	=> $res_id,
+						);
+
+					}//endforeach;
+					$meta_query['relation'] = 'OR';
+					$app_args = array();
+					if( $jobs->have_posts() ){
+						$app_args = array(
+							'post_type' 			=> 'application',
+							'post_status'			=> 'publish',
+							'posts_per_page'	=> get_option( 'posts_per_page', 10 ),
+							'paged'						=> $app_paged,
+							'meta_query'			=> $meta_query,
+						);
+					}
+
+					$app = new WP_Query($app_args);
+
+					if( $app->have_posts() ){
+						while( $app->have_posts() ){
+							$app->the_post();
+
+				?>
+					<tr id="list-item-app-<?php echo get_the_id(); ?>" class="job-list-item job-list-item-child job-<?php echo get_post_meta( get_the_id(), '_jboard_applied_job', true ) ?>-child">
+						<td class="application-list-title">
+							<div class="applicant-list-title-wrapper">
+								<h4>
+								<?php
+									$userid = get_post_meta( get_the_id(), '_jboard_applicant_name', true );
+									echo esc_attr( get_userdata($userid)->display_name );
+								?>
+								</h4>
+								<span>
+								<?php
+								$resume_id = get_post_meta( get_the_ID(), '_jboard_applicant_resume', true );
+								printf( __( 'Resume: %s', 'jobboard' ), get_the_title( $resume_id ) );
+								?></span>
+							</div><!-- /.job-list-title-wrapper -->
+						</td>
+						<td class="application-job">
 							<?php
-								$userid = get_post_meta( get_the_id(), '_jboard_applicant_name', true );
-								echo esc_attr( get_userdata($userid)->display_name );
+							echo esc_attr( get_the_title( get_post_meta( get_the_id(), '_jboard_applied_job', true ) ) ); ?>
+						</td>
+						<td class="job-list-date resume-list-date hidden-sm">
+							<i class="fa fa-calendar"></i>
+							<?php
+								$publish_date = get_the_date( 'F j, Y', get_the_id() );
+								// echo jobboard_time_ago( $publish_date ).'&nbsp;'.__( 'ago', 'jobboard' );
+								printf( _x( '%s ago', '%s = human-readable time difference', 'jobboard' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) );
 							?>
-							</h4>
-							<span>
+						</td>
+						<td class="resume-list-status application">
+							<form id="application_form_<?php echo get_the_id(); ?>" class="application_status_form" method="post" action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>">
+								<select id="application_status" name="application_status" class="application_status form-control">
 							<?php
-							$resume_id = get_post_meta( get_the_ID(), '_jboard_applicant_resume', true );
-							printf( __( 'Resume: %s', 'jobboard' ), get_the_title( $resume_id ) );
-							?></span>
-						</div><!-- /.job-list-title-wrapper -->
-					</div><!-- /.resume-list-title -->
+								$status_id = get_post_meta( get_the_id(), '_jboard_application_status', true );
 
-					<div class="application-job">
-					<?php
-						echo esc_attr( get_the_title( get_post_meta( get_the_id(), '_jboard_applied_job', true ) ) ); ?>
-					</div><!-- /.resume-list-category -->
-
-					<div class="job-list-date resume-list-date hidden-sm">
-						<i class="fa fa-calendar"></i>
-					<?php
-						$publish_date = get_the_date( 'F j, Y', get_the_id() );
-						// echo jobboard_time_ago( $publish_date ).'&nbsp;'.__( 'ago', 'jobboard' );
-						printf( _x( '%s ago', '%s = human-readable time difference', 'jobboard' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) );
-					?>
-					</div><!-- /.job-list-date -->
-
-					<div class="resume-list-status application">
-						<form id="application_form_<?php echo get_the_id(); ?>" class="application_status_form" method="post" action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>">
-							<select id="application_status" name="application_status" class="application_status form-control">
-						<?php
-							$status_id = get_post_meta( get_the_id(), '_jboard_application_status', true );
-
-							$terms = get_terms( 'application_status', array( 'hide_empty' => false ) );
-							foreach( $terms as $term ){
-								$selected = '';
-								if( $status_id == $term->term_id ){
-									$selected = 'selected';
-								}
-								echo '<option value="'.esc_attr( $term->term_id ).'" '.esc_attr( $selected ).'>'.esc_attr( $term->name ).'</option>';
-							}//endforeach;
-						?>
-								<input type="hidden" name="action" value="jobboard_change_application_status" />
-								<input type="hidden" name="app_id" value="<?php echo esc_attr( get_the_id() ); ?>" />
-							</select>
-						</form>
-					</div><!-- /.resume-list-status -->
-
-					<div class="resume-list-action application">
-						<a class="hidden-sm" href="<?php echo esc_url( get_permalink(get_post_meta( get_the_id(), '_jboard_applicant_resume', true )) ); ?>" target="_blank"><i class="fa fa-eye"></i> <?php _e( 'View Resume', 'jobboard' ); ?></a>
-						<a class="hidden-lg hidden-md" href="<?php echo esc_url( get_permalink(get_post_meta( get_the_id(), '_jboard_applicant_resume', true )) ); ?>" target="_blank" title="<?php _e( 'View Resume', 'jobboard' ); ?>"><i class="fa fa-eye"></i></a>
-					</div><!-- /.resume-list-action -->
-
-					<div class="job-list-delete application">
-						<form class="jobboard_delete_item application-<?php echo esc_attr( get_the_ID() ); ?>" method="post" action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" data-post-id="<?php echo esc_attr( get_the_ID() ); ?>">
-							<button class="btn btn-list-delete" type="submit" name="submit">
-								<i class="fa fa-trash-o"></i>
-								<span class="hidden-xs hidden-sm"><?php _e( 'Delete', 'jobboard' ); ?></span>
-							</button>
-							<input type="hidden" name="post_id" value="<?php echo esc_attr( get_the_ID() ); ?>" />
-							<input type="hidden" name="action" value="jobboard_delete_post_item" />
-						</form>
-					</div><!-- /.job-list-delete -->
-					<script type="text/javascript">
-					jQuery( function($){
-						$('form.jobboard_delete_item.application-<?php echo esc_attr( get_the_ID() ); ?> .btn-list-delete').on( 'click', function (e){
-							var post_url = "<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>",
-									application_data = {
-										action: 'jobboard_delete_post_item',
-										post_id: <?php echo esc_attr( get_the_ID() ); ?>,
-									};
-							e.preventDefault();
-							var r = confirm( "<?php printf( __( 'Are you sure want to delete \"%s\" application?', 'jobboard' ), get_userdata($userid)->display_name.'\'s' ); ?>" );
-							if(r) {
-								$.post(post_url, application_data, function(response){
-									$('#list-item-app-<?php echo esc_attr( get_the_ID() ); ?>').css('overflow','hidden').slideUp();
+								$terms = get_terms( 'application_status', array( 'hide_empty' => false ) );
+								foreach( $terms as $term ){
+									$selected = '';
+									if( $status_id == $term->term_id ){
+										$selected = 'selected';
+									}
+									echo '<option value="'.esc_attr( $term->term_id ).'" '.esc_attr( $selected ).'>'.esc_attr( $term->name ).'</option>';
+								}//endforeach;
+							?>
+									<input type="hidden" name="action" value="jobboard_change_application_status" />
+									<input type="hidden" name="app_id" value="<?php echo esc_attr( get_the_id() ); ?>" />
+								</select>
+							</form>
+						</td>
+						<td class="resume-list-action application">
+							<a class="hidden-sm" href="<?php echo esc_url( get_permalink(get_post_meta( get_the_id(), '_jboard_applicant_resume', true )) ); ?>" target="_blank"><i class="fa fa-eye"></i> <?php _e( 'View Resume', 'jobboard' ); ?></a>
+							<a class="hidden-lg hidden-md" href="<?php echo esc_url( get_permalink(get_post_meta( get_the_id(), '_jboard_applicant_resume', true )) ); ?>" target="_blank" title="<?php _e( 'View Resume', 'jobboard' ); ?>"><i class="fa fa-eye"></i></a>
+						</td>
+						<td class="job-list-delete application">
+							<form class="jobboard_delete_item application-<?php echo esc_attr( get_the_ID() ); ?>" method="post" action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" data-post-id="<?php echo esc_attr( get_the_ID() ); ?>">
+								<button class="btn btn-list-delete" type="submit" name="submit">
+									<i class="fa fa-trash-o"></i>
+									<span class="hidden-xs hidden-sm"><?php _e( 'Delete', 'jobboard' ); ?></span>
+								</button>
+								<input type="hidden" name="post_id" value="<?php echo esc_attr( get_the_ID() ); ?>" />
+								<input type="hidden" name="action" value="jobboard_delete_post_item" />
+							</form>
+							<script type="text/javascript">
+							jQuery( function($){
+								$('form.jobboard_delete_item.application-<?php echo esc_attr( get_the_ID() ); ?> .btn-list-delete').on( 'click', function (e){
+									var post_url = "<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>",
+											application_data = {
+												action: 'jobboard_delete_post_item',
+												post_id: <?php echo esc_attr( get_the_ID() ); ?>,
+											};
+									e.preventDefault();
+									var r = confirm( "<?php printf( __( 'Are you sure want to delete \"%s\" application?', 'jobboard' ), get_userdata($userid)->display_name.'\'s' ); ?>" );
+									if(r) {
+										$.post(post_url, application_data, function(response){
+											$('#list-item-app-<?php echo esc_attr( get_the_ID() ); ?>').css('overflow','hidden').slideUp();
+										});
+										return true;
+									}
+									return false;
 								});
-								return true;
-							}
-							return false;
-						});
-					});
-					</script>
-				</div><!-- /.job-list-item -->
+							});
+							</script>
+						</td>
+					</tr>
 					<?php
 
 					}//endwhile;
@@ -814,12 +819,18 @@
 				echo '</div><!-- /.dashboard-pagination -->';
 				}
 				wp_reset_postdata();
-			?>
-			</div><!-- .applicant-list-inner -->
+			?>	
+			</tbody>
+			</table>
 			<div id="loadajax_applist" class="loading-ajax">
 			  <i class="fa fa-refresh fa-spin fa-2x"></i>
 			</div>
-		</div><!-- #applicant-list -->
+			<script type="text/javascript">
+				$(document).ready(function(){
+				    $('#myTable').DataTable();
+				});
+			</script>
+		</div>	<!-- #applicant-list -->
 
 
 		<div class="jobs-listing-title">

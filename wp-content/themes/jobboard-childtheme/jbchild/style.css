@@ -289,3 +289,32 @@
 	text-align: center;
 	width: 160px;
 }
+
+table.applicant-list-inner{
+	border: 1px solid #e3e3e3;
+	width: 100%;
+  	text-align: left;
+  	border-collapse: collapse;	
+}
+
+table.applicant-list-inner tr th{
+	padding: 15px;
+	border: 1px solid #e3e3e3;
+}
+
+.applicant-list-title-wrapper h4{
+	margin-top: 0;
+}
+
+.job-list-item .application-job{
+	padding-top: 0;
+}
+
+.job-list-date{
+	padding-left: 0;
+	text-align: center;
+}
+
+.resume-list-status{
+	padding: 0 15px;
+}
