@@ -617,14 +617,16 @@
 						?>
 					</div> --><!-- /.job-list-featured -->
 					<div class="applications_job">
-						<button id='hideshow' class="btn btn-info">Applicants</button>
+						<button id='hideshow' class="btn btn-info job-<?php echo $job_id?>">Applicants</button>
 					</div>
 					<script type="text/javascript">
 						jQuery(document).ready(function(){
-					    jQuery('#hideshow').live('click', function(event) {        
-					         jQuery('#applicant-list').toggle('slow', 2000);
-					    });
-					});
+							jQuery('.job-<?php echo $job_id ?>').click(function(){
+								jQuery('.job-list-item-child').css("display", "none");
+								jQuery(".job-<?php echo $job_id ?>-child").css("display", "block");
+								console.log('123');
+							});
+						});
 					</script>
 				</div><!-- /.job-list-item -->
 
@@ -707,7 +709,7 @@
 						$app->the_post();
 
 					?>
-				<div id="list-item-app-<?php echo get_the_id(); ?>" class="job-list-item clearfix">
+				<div id="list-item-app-<?php echo get_the_id(); ?>" class="job-list-item job-list-item-child job-<?php echo get_post_meta( get_the_id(), '_jboard_applied_job', true ) ?>-child clearfix">
 					<div class="application-list-title">
 						<div class="applicant-list-title-wrapper">
 							<h4>
