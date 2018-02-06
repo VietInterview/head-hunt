@@ -139,7 +139,8 @@ while( have_posts() ){
 					$currency_after = ( $currency_position == 'after_nominal' ) ? $currency_sign : '';
 
 					if ( !empty( $job_sallary ) ) {
-						echo $currency_before.number_format( $job_sallary, $decimal_point, $point_separator, $thousand_separator ).$currency_after;
+						echo $job_sallary;
+						//$currency_before.number_format( $job_sallary, $decimal_point, $point_separator, $thousand_separator ).$currency_after;
 					}
 
 				?>
@@ -157,15 +158,15 @@ while( have_posts() ){
 		<!-- <div class="the-job-aditional-details">	
 		</div> --><!-- /.the-job-aditional-details -->
 
-		<div id="job-description" class="row">
+		<!-- <div id="job-description" class="row">
 			<div class="col-md-12">
 				<article id="job-overview-<?php echo $job_id; ?>">
 					<h1><?php _e( 'Overview', 'jobboard' ); ?></h1>
 					<p>
 						<?php echo get_post_meta( $job_id, '_jboard_job_overview', true ); ?>
 					</p>
-				</article><!-- /#job-overview-<?php echo $job_id; ?> -->
-			</div><!-- /.col-md-6" -->
+				</article> --><!-- /#job-overview-<?php echo $job_id; ?> -->
+			<!-- </div> --><!-- /.col-md-6" -->
 			<!-- <div class="col-md-6">
 				<article id="about-company-<?php echo $job_id; ?>">
 					<h1><?php echo __( 'About', 'jobboard' ).'&nbsp;'.esc_attr(get_the_title($company_id)); ?></h1>
@@ -174,7 +175,7 @@ while( have_posts() ){
 					</p>
 				</article> --><!-- /#job-overview-<?php echo $job_id; ?> -->
 			<!-- </div> --><!-- /.col-md-6" -->
-		</div><!-- /#job-description -->
+		<!-- </div> --><!-- /#job-description -->
 	</div><!-- /.container -->
 </div><!-- /#job-detail -->
 

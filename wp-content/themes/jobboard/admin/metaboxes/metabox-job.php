@@ -61,7 +61,7 @@ return array(
 		'name' => 'job_sallary',
 		'label' => __( 'Salary', 'jobboard' ),
 		'description' => __( 'Enter the a matter of job salary per year. So your ad can show in job search page.', 'jobboard' ),
-		'validation' => 'numeric',
+		'validation' => 'maxlength[60]',
 	),
 	array(
 		'type' => 'textbox',

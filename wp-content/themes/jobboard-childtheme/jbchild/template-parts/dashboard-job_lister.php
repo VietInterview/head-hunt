@@ -813,15 +813,16 @@
 					'add_args' => array( 'job_paged' => $job_paged, 'bookmark_paged' => $bookmark_paged, 'company_paged' => $company_paged ),
 					'prev_text'    => __( 'Previous', 'jobboard' ),
 					'next_text'    => __( 'Next', 'jobboard' ),
-				);
+				);?>
+			</tbody>
+			</table>
+			<?php
 				echo '<div class="dashboard-pagination">';
 				echo paginate_links( $pag_args4 );
 				echo '</div><!-- /.dashboard-pagination -->';
 				}
 				wp_reset_postdata();
 			?>	
-			</tbody>
-			</table>
 			<div id="loadajax_applist" class="loading-ajax">
 			  <i class="fa fa-refresh fa-spin fa-2x"></i>
 			</div>
