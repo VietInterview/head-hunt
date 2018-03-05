@@ -158,24 +158,24 @@ while( have_posts() ){
 		<!-- <div class="the-job-aditional-details">	
 		</div> --><!-- /.the-job-aditional-details -->
 
-		<!-- <div id="job-description" class="row">
+		<div id="job-description" class="row">
 			<div class="col-md-12">
 				<article id="job-overview-<?php echo $job_id; ?>">
 					<h1><?php _e( 'Overview', 'jobboard' ); ?></h1>
 					<p>
 						<?php echo get_post_meta( $job_id, '_jboard_job_overview', true ); ?>
 					</p>
-				</article> --><!-- /#job-overview-<?php echo $job_id; ?> -->
-			<!-- </div> --><!-- /.col-md-6" -->
+				</article><!-- /#job-overview-<?php echo $job_id; ?> -->
+			</div><!-- /.col-md-6" -->
 			<!-- <div class="col-md-6">
 				<article id="about-company-<?php echo $job_id; ?>">
 					<h1><?php echo __( 'About', 'jobboard' ).'&nbsp;'.esc_attr(get_the_title($company_id)); ?></h1>
 					<p>
 						<?php echo get_post_meta( $company_id, '_jboard_company_description', true); ?>
 					</p>
-				</article> --><!-- /#job-overview-<?php echo $job_id; ?> -->
+				</article> --><!-- /#job-overview-<?php echo $job_id; ?>-->
 			<!-- </div> --><!-- /.col-md-6" -->
-		<!-- </div> --><!-- /#job-description -->
+		</div><!-- /#job-description -->
 	</div><!-- /.container -->
 </div><!-- /#job-detail -->
 
