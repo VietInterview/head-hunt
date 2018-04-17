@@ -150,11 +150,11 @@
 
 								//foreach($salaries as $salary) :
 
-								echo '<option value="100">'.'100'.'</option>';
-								echo '<option value="200">'.'200'.'</option>';
-								echo '<option value="300">'.'300'.'</option>';
-								echo '<option value="400">'.'400'.'</option>';
-								echo '<option value="500">'.'500'.'</option>';
+								echo '<option value="100">'.'200'.'</option>';
+								echo '<option value="200">'.'500'.'</option>';
+								echo '<option value="300">'.'700'.'</option>';
+								echo '<option value="400">'.'1000'.'</option>';
+								echo '<option value="500">'.'1200'.'</option>';
 
 								//endforeach;
 
