@@ -322,3 +322,13 @@ table.applicant-list-inner tr th{
 .the-job-button .btn-apply-job{
 	background: #FC4242;
 }
+
+.job-listing-region, .job-listing-name .job-listing-summary{
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.job-listing-name h4{
+	line-height: 20px;
+}
