@@ -684,7 +684,7 @@ a.next.page-numbers i.fa {
 }
 
 .testimonials-title {
-	color: #fff;
+	color: rgb(80, 80, 80);
 }
 
 #testimonials-wrapper .owl-item.active.center:after {
@@ -710,6 +710,7 @@ a.next.page-numbers i.fa {
 .caption-content {
 	margin-top: 20px;
 	margin-bottom: 20px;
+	text-align: center !important;
 }
 
 .caption-social a .fa-circle {
@@ -1070,4 +1071,325 @@ input[type="radio"] .styled:checked + label::after {
 		display: block;
 		text-align: left;
 	}
+}
+
+.job-filter-dropdown {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.companies-listing-wrapper {
+	margin-top: 30px;
+}
+
+#footer-widgets #button-c .fa {
+  padding: 10px 0px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+  color: white;
+  border-radius: 50%;
+}
+
+#footer-widgets #button-c .fa:hover {
+    opacity: 0.7;
+}
+
+#footer-widgets #button-c .fa-facebook {
+  background: #3B5998;
+}
+
+#footer-widgets #button-c .fa-youtube {
+  background: #bb0000;
+}
+
+#footer-widgets #button-c .fa-skype {
+  background: #00aff0;
+}
+
+#footer-widgets #button-c li {
+	float: left;
+	padding: 5px 5px 5px 0px;
+}
+
+#footer-widgets ul{
+	padding-left: 0;
+}
+
+#footer-widgets #text-2 h3{
+	line-height: 22px;
+}
+
+.the-job-aditional-title:last-child{
+	margin-left: 0;
+}
+
+.the-job-title{
+	float: left;
+}
+
+.the-job-cate{
+	text-align: center;
+	width: auto;
+	padding: 0 30px;
+}
+
+.the-job-location{
+	width: auto;
+	padding:0 30px;
+}
+
+.the-job-type{
+	width: auto;
+	padding:0 30px;
+}
+
+.the-job-salary{
+	width: auto;
+	padding:0 30px;
+	text-align: center;
+}
+
+.the-job-exp{
+	width: auto;
+	padding:0 30px;
+	text-align: center;
+	border-right: none !important;
+}
+
+.the-job-button{
+	float: right;
+}
+
+.company-job-detail {
+	margin-top: 30px;
+}
+
+.job-cat-links {
+	padding-right: 0;
+}
+
+#footer-widgets .widget-container {
+	min-height: 200px;
+}
+
+#footer-widgets ul li {
+    padding: 5px 0 10px;
+}
+
+#footer-widgets .widget{
+	padding-top: 0;
+}
+
+#footer-text {
+	margin-top: 5px;
+}
+
+#companies-listing {
+    padding: 20px 0 40px;
+}
+
+#companies-listing h1 {
+    font-size: 32px;
+}
+
+#footer {
+    padding-bottom: 20px;
+}
+
+#jobs-listing {
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+
+#testimonials-caption .caption-title{
+	font-weight: 700;
+	font-size: 16px;
+}
+
+#testimonials {
+    padding: 50px 0 20px;
+    margin-top: 20px;
+}
+
+.testimonials-title {
+    font-size: 32px;
+    margin-bottom: 0px;
+}
+
+#testimonials h1 {
+	margin-top: 0;
+}
+
+#testimonials-caption .caption-content {
+	font-size:16px;
+}
+
+.caption-social {
+    margin-top: 28px;
+}
+
+#testimonials-wrapper .owl-stage .owl-item img{
+	border-radius: 50%;
+	width: 180px;
+	height: 180px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+/*#testimonials-wrapper .owl-stage .owl-item .testimonial-item img{
+    -webkit-filter: grayscale(100%);*/ /* Chrome 19+, Safari 6+, Safari 6+ iOS */}
+/*}
+#testimonials-wrapper .owl-stage .owl-item.active.center .testimonial-item img{
+    -webkit-filter: grayscale(0%); *//* Chrome 19+, Safari 6+, Safari 6+ iOS */
+ /*   filter: none;
+}*/
+
+#wrapper .register{
+	margin-top: 30px;
+}
+
+#wrapper p{
+	text-align: justify;
+}
+
+.the-job-details{
+	margin: 10px 0;
+}
+
+#job-description article > h1 {
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#job-detail{
+	padding: 10px 0 20px;
+}
+
+.about-us h4, .team h4{
+	margin-top: 20px;
+	margin-bottom: 35px;
+}
+
+.intro{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#content{
+	margin-top: 20px;
+	padding-top: 0;
+}
+
+#content p{
+	text-align: justify;
+	font-size: 16px;
+	padding-bottom: 30px;
+	margin-bottom: 0;
+}
+
+#content .team{
+    background: #f7f7f7;
+    margin-top: -20px;
+    padding-top: 20px;
+    margin-bottom: -40px;
+}
+
+.team #testimonials{
+	padding-top: 20px;
+}
+
+.team #testimonials-wrapper{
+	margin-top: 10px;
+}
+
+.team #testimonials-caption{
+	padding-top: 10px;
+}
+
+.team #testimonials-caption p{
+	text-align: center;
+	margin-bottom: 0px;
+	padding-bottom: 5px;
+}
+
+.team #testimonials-caption .caption-social {
+    margin-top: 10px;
+}
+
+#page-title-wrapper{
+	min-height: 80px;
+}
+
+.page-title{
+	line-height: 80px;
+}
+
+#contact-form.wpcf7 textarea.form-control{
+	height: 150px;
+}
+
+#wrapper .login-page-wrapper h4{
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+#wrapper #content #sidebar-default .widget_jobboard_custom_button h4{
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+#content .custom-button-widget-text{
+	text-align: center;
+	padding-bottom: 0px;
+}
+
+.applications_job{
+	text-align: center;
+	width: 160px;
+}
+
+table.applicant-list-inner{
+	border: 1px solid #e3e3e3;
+	width: 100%;
+  	text-align: left;
+  	border-collapse: collapse;	
+}
+
+table.applicant-list-inner tr th{
+	padding: 15px;
+	border: 1px solid #e3e3e3;
+}
+
+.applicant-list-title-wrapper h4{
+	margin-top: 0;
+}
+
+.job-list-item .application-job{
+	padding-top: 0;
+}
+
+.job-list-date{
+	padding-left: 0;
+	text-align: center;
+}
+
+.resume-list-status{
+	padding: 0 15px;
+}
+
+.the-job-button .btn-apply-job{
+	background: #FC4242;
+}
+
+.job-listing-region, .job-listing-name .job-listing-summary{
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.job-listing-name h4{
+	line-height: 20px;
 }

@@ -97,8 +97,8 @@ get_header();
 <div id="content">
 	<div class="container">
 		<div class="row intro">
-			<h3>Submit your resume online and VietInterview helps you find your next job opportunity.</h3>
-			<p class="text-justify">Your future starts now. Don't rely on impersonal job boards to reach your personal career goals. In today's economy, you need knowledgeable guidance to find the right job, right now. Vietinterview can help you identify your best move or successfully transition careers. Please fill out the contact form below or contact us at 0466.629.448.</p>
+			<h3>Submit your resume online and VietInterview will help you find your next job opportunity.</h3>
+			<p class="text-justify">Your future starts now. Don't rely on impersonal job boards to reach your personal career goals. In today's economy, you need knowledgeable guidance to find the right job, right now. Vietinterview can help you identify your best move or successfully transition careers. Please fill out the contact form below or contact us at 02466.629.448.</p>
 		</div>
 		<div class="row">
 			<div class="col-md-8">
