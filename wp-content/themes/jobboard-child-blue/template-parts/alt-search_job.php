@@ -94,7 +94,7 @@
 					</div>
 					<div class="col-md-6">
 						<div class="form-group sallary">
-							<label class="slider-label"><?php printf( __( 'Salary (%s) / per year', 'jobboard' ), jobboard_option( 'currency_sign' ) ); ?></label>
+							<label class="slider-label"><?php printf( __( 'Salary (%s) / per month', 'jobboard' ), jobboard_option( 'currency_sign' ) ); ?></label>
 							<select class="init-slider" name="sallary_min" id="sallary_min">
 								<option value="0">0</option>
 								<?php

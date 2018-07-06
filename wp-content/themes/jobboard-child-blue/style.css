@@ -16,6 +16,19 @@
 -------------------------------------------------------------- */
 /** Accent Colors */
 
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.removepd{
+	padding: 0 !important;
+}
+
+.removemg{
+	margin: 0 !important;
+}
+
 a {
 	color: #1d53a5;
 }
@@ -70,8 +83,6 @@ a:focus,
 	color: #1d53a5;
 	border-bottom-color: transparent;
 }
-
-
 
 #login-form-wrapper,
 .jobboard_company_contactform {
