@@ -53,10 +53,11 @@
 					?>
 					<div class="job-listing-row homepage clearfix">
 						<div class="job-company-logo">
-						<?php
+						<!-- <?php
 							$comp_id = get_post_meta( get_the_id(), '_jboard_job_company', true );
 							echo get_the_post_thumbnail( $comp_id , 'jobboard-related-company-logo-thumbnail' );
-						?>
+						?> -->
+						<img width="80px" height="20px" src="wp-content/images/logo.png">
 						</div><!-- /.job-company-logo -->
 						<div class="job-listing-name">
 							<h4><?php echo esc_attr( get_the_title() ); ?></h4>

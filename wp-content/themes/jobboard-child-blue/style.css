@@ -1393,3 +1393,7 @@ table.applicant-list-inner tr th{
 .job-listing-name h4{
 	line-height: 20px;
 }
+
+#main-menu .nav-menu > li{
+	padding: 0 15px;
+}
