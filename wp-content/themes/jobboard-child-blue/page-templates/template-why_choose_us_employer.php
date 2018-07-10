@@ -107,9 +107,9 @@ get_header(); ?>
 		</div>
 
 		<?php
-				if( jobboard_option('enable_testimonial') ){
-					get_template_part( 'template-parts/homepage', 'testimonials' );
-				}//endif;
+				if( jobboard_option( 'enable_testimonial' ) ){
+					get_template_part( 'template-parts/homepage', 'testimonials_alt' );
+				}
 		?>
 	
 
