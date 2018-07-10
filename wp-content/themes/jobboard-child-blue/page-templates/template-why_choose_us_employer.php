@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Why choose Us
+ * Template Name: Why choose Us Empoloyers
  *
  * @package WordPress
  * @subpackage Job_Board
@@ -39,9 +39,8 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="content-step">
-					<div class="title-step">1. Application Review</div>
-					<p> We promise we review every application that we receive with respect and diligence.
-						We evaluate your background and determine if it aligns with our current opportunities.</p>
+					<div class="title-step">1. Define Search</div>
+					<p> We meet with you to conduct an in-depth needs assessment. We get to know your team and culture so we can scope out the 'ideal candidate.'</p>
 				</div>
 			</div>
 			<div class="step-2 card">
@@ -53,8 +52,8 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="content-step">
-					<div class="title-step">2. Interview</div>
-					<p> If you are potential fit for one of our clients we will contact you to learn more about you. During an in-person interview we dig even deeper to get to know about your career path and goals.</p>
+					<div class="title-step">2. Source & Qualify</div>
+					<p> We search far and wide to find you the best talent. We meet with every potential candidate to ensure they have the skills required and will fit your culture.</p>
 				</div>
 			</div>
 			<div class="step-3 card">
@@ -66,8 +65,8 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="content-step">
-					<div class="title-step">3. Career Insight Report</div>
-					<p> All our candidates undertake a free Workstyle &Performance Profile (WPP) to help us get to know your behaviour in the workplace and the kind of culture you would work well in.</p>
+					<div class="title-step">3. Client Interviews</div>
+					<p> We present a shortlist of the top candidates and support the scheduling of interviews. We communicate with you through each step of the process.</p>
 				</div>
 			</div>
 			<div class="step-4 card">
@@ -79,8 +78,8 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="content-step">
-					<div class="title-step">4. Educate & Advise</div>
-					<p> We are here to help you present your best self. We consult with you to improve your resume, prepare for interviews and negotiate your compensation. Consider us your coach.</p>
+					<div class="title-step">4. Select</div>
+					<p> We consult with you to evaluate the finalists and select a candidate. We are here to help you negotiate and secure an accepted offer.</p>
 				</div>
 			</div>
 			<div class="step-5 card">
@@ -92,17 +91,19 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="content-step">
-					<div class="title-step">5. Follow Up</div>
-					<p> After a placement we don’t just walk away. We will follow up with you to ensure you are happy and that the new role supports your career aspirations.</p>
+					<div class="title-step">5. Onboard</div>
+					<p> Our service doesn’t end when we find you the right person. We support the onboarding of a new hire and always check in to ensure you are happy.</p>
 				</div>	
 			</div>
 		</div>
 
 		<div class="clearfix"></div>
-
-		<div id="action-FAQs">
-			<h2>Never worked with a recruiter before and not sure what to expect?</h2>
-			<a href="" class="btn btn-primary">FAQs</a>
+		
+		<div id="action-search">
+			<div class="content">
+				<h2 class="">Get started on your talent search today</h2>
+				<a href="" class="btn btn-primary">CONNECT NOW</a>
+			</div>
 		</div>
 
 		<?php
@@ -110,15 +111,7 @@ get_header(); ?>
 					get_template_part( 'template-parts/homepage', 'testimonials' );
 				}//endif;
 		?>
-
-		<div id="action-search">
-			<div class="content">
-				<h2 class="">Ready to land your dream job?</h2>
-				<a href="" class="btn btn-primary">SEARCH JOBS</a>
-			</div>
-		</div>
-
-		
+	
 
 	</div><!-- /.container -->
 </div><!-- /#content -->
