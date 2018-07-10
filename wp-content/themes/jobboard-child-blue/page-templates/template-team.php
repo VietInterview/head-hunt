@@ -27,11 +27,6 @@ get_header(); ?>
 						}//endwhile;
 					?>
 			</article>
-			<?php
-				if( jobboard_option('enable_testimonial') ){
-					get_template_part( 'template-parts/homepage', 'testimonials' );
-				}//endif;
-			?>
 		</div><!-- /.container -->
 	</div>
 </div><!-- /#content -->

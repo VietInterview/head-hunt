@@ -44,6 +44,7 @@ function jobboard_child_scripts(){
 		wp_localize_script( 'theme-js', 'slider', array( 'init' => false, 'home_init' => true ) );
 	}
 	wp_enqueue_script( 'jobboard-child', get_stylesheet_directory_uri() . '/js/jobboard-child.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'jobboard-child', get_stylesheet_directory_uri() . '/js/jquery.easy-pie-chart.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'jobboard_child_scripts', 99 );
 
