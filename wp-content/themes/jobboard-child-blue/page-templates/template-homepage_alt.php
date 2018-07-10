@@ -13,7 +13,18 @@ get_header();
 	}
 
 	get_template_part( 'template-parts/form', 'job_search_alt' );
+?>
+	<article id="page-<?php the_ID(); ?>">
+			<?php
+				while( have_posts() ){
+					the_post();
 
+					the_content();
+
+				}//endwhile;
+			?>
+	</article>
+<?php
 	get_template_part( 'template-parts/homepage', 'jobs_listing_alt' );
 
 	if( jobboard_option( 'enable_job_status' ) ){
