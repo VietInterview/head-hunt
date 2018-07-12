@@ -104,14 +104,7 @@ get_header(); ?>
 				<h2 class="">Get started on your talent search today</h2>
 				<a href="" class="btn btn-primary">CONNECT NOW</a>
 			</div>
-		</div>
-
-		<?php
-			if( jobboard_option( 'enable_testimonial' ) ){
-				get_template_part( 'template-parts/homepage', 'testimonials_alt' );
-			}
-		?>
-	
+		</div>	
 
 	</div><!-- /.container -->
 </div><!-- /#content -->

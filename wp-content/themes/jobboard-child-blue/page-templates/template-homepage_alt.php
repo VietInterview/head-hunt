@@ -13,6 +13,8 @@ get_header();
 	}
 
 	get_template_part( 'template-parts/form', 'job_search_alt' );
+
+	get_template_part( 'template-parts/homepage', 'jobs_listing_alt' );
 ?>
 	<article id="page-<?php the_ID(); ?>">
 			<?php
@@ -25,7 +27,6 @@ get_header();
 			?>
 	</article>
 <?php
-	get_template_part( 'template-parts/homepage', 'jobs_listing_alt' );
 
 	if( jobboard_option( 'enable_job_status' ) ){
 		get_template_part( 'template-parts/homepage', 'job_stats_alt' );

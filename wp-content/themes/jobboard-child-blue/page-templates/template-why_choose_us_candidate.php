@@ -105,12 +105,6 @@ get_header(); ?>
 			<a href="" class="btn btn-primary">FAQs</a>
 		</div>
 
-		<?php
-			if( jobboard_option( 'enable_testimonial' ) ){
-				get_template_part( 'template-parts/homepage', 'testimonials_alt' );
-			}
-		?>
-
 		<div id="action-search">
 			<div class="content">
 				<h2 class="">Ready to land your dream job?</h2>
